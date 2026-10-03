@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 import { cn } from "@/lib/cn";
 
 type LogoProps = {
@@ -31,7 +32,7 @@ export function Logo({
       aria-label="Ayusyntax home"
     >
       <Image
-        src="/brand/ayusyntax-logo.png"
+        src={withBasePath("/brand/ayusyntax-logo.png")}
         alt="Ayusyntax"
         width={width}
         height={height}

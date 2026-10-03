@@ -17,12 +17,15 @@ const sourceSerif = Source_Serif_4({
   weight: ["500", "600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

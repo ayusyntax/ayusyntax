@@ -13,8 +13,27 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
-npm run start
 ```
+
+Local dev uses the site root (`/`). GitHub Pages project sites are served under `/REPO_NAME/`.
+
+```bash
+# Preview the same paths as production on GitHub Pages (replace user/repo if needed)
+NEXT_PUBLIC_BASE_PATH=/ayusyntax NEXT_PUBLIC_SITE_URL=https://YOUR_USER.github.io/ayusyntax npm run build
+npx serve out
+```
+
+## GitHub Pages
+
+1. In the repository on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Push to `main` (or run **Deploy GitHub Pages** manually under Actions).
+3. The workflow [`.github/workflows/deploy-github-pages.yml`](.github/workflows/deploy-github-pages.yml) sets:
+   - `NEXT_PUBLIC_BASE_PATH` to `/<repository-name>` so routes and assets resolve to `https://<user>.github.io/<repo>/...`
+   - `NEXT_PUBLIC_SITE_URL` for correct metadata and absolute URLs
+
+Internal links use `next/link` with root-relative paths (`/mission`, etc.); Next.js applies `basePath` automatically in production builds.
+
+If the repository is renamed, no config change is required—the workflow derives the path from `github.event.repository.name`.
 
 ## Project structure
 

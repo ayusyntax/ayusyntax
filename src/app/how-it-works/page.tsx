@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageShell } from "@/components/layout/PageShell";
 import { PhaseCards } from "@/components/sections/PhaseCards";
 import { howItWorksContent } from "@/content/phases";
+import { withBasePath } from "@/lib/base-path";
 
 export const metadata: Metadata = {
   title: "How it works",
@@ -21,7 +22,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-[var(--container-max)] px-5 sm:px-8">
           <figure className="rounded-lg border border-border bg-bg-elevated p-6 sm:p-10">
             <Image
-              src="/diagrams/phase-diagram.svg"
+              src={withBasePath("/diagrams/phase-diagram.svg")}
               alt={howItWorksContent.diagramCaption}
               width={720}
               height={200}

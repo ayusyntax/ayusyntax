@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/ayusyntax NEXT_PUBLIC_SITE_URL=https://example.github.io/ayusyntax next build",
     "start": "next start",
     "lint": "eslint"
   },
