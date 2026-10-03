@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" fill="none" role="img" aria-label="Conceptual data flow from clinic to hospital through encrypted routing">
+  <rect x="24" y="64" width="140" height="72" rx="8" stroke="#6bb030" stroke-width="2"/>
+  <text x="94" y="95" text-anchor="middle" fill="#f2f5f3" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Clinic site</text>
+  <text x="94" y="115" text-anchor="middle" fill="#9aa8a0" font-family="system-ui,sans-serif" font-size="11">Public info</text>
+
+  <path d="M164 100 H248" stroke="#6bb030" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="248,100 240,96 240,104" fill="#6bb030"/>
+
+  <rect x="248" y="64" width="140" height="72" rx="8" stroke="#9aa8a0" stroke-width="1.5"/>
+  <text x="318" y="95" text-anchor="middle" fill="#f2f5f3" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Trust layer</text>
+  <text x="318" y="115" text-anchor="middle" fill="#9aa8a0" font-family="system-ui,sans-serif" font-size="11">No PHI in Phase 1</text>
+
+  <path d="M388 100 H472" stroke="#6bb030" stroke-width="2"/>
+  <polygon points="472,100 464,96 464,104" fill="#6bb030"/>
+
+  <rect x="472" y="48" width="160" height="104" rx="8" stroke="#6bb030" stroke-width="2"/>
+  <text x="552" y="88" text-anchor="middle" fill="#f2f5f3" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Ayusyntax router</text>
+  <text x="552" y="108" text-anchor="middle" fill="#9aa8a0" font-family="system-ui,sans-serif" font-size="11">Encrypted payloads</text>
+  <text x="552" y="128" text-anchor="middle" fill="#9aa8a0" font-family="system-ui,sans-serif" font-size="11">Keys with hospital</text>
+
+  <path d="M632 100 H672" stroke="#6bb030" stroke-width="2"/>
+  <polygon points="672,100 664,96 664,104" fill="#6bb030"/>
+
+  <rect x="576" y="64" width="120" height="72" rx="8" stroke="#9aa8a0" stroke-width="1.5"/>
+  <text x="636" y="100" text-anchor="middle" fill="#f2f5f3" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Hospital</text>
+</svg>
