@@ -7,6 +7,30 @@ import { Card } from "@/components/ui/Card";
 import { formFieldClass, formLabelClass } from "@/components/ui/fieldStyles";
 import { siteConfig } from "@/lib/constants";
 
+function openMailto(form: HTMLFormElement) {
+  const data = new FormData(form);
+  const name = String(data.get("name") ?? "").trim();
+  const email = String(data.get("email") ?? "").trim();
+  const organization = String(data.get("organization") ?? "").trim();
+  const bodyText = String(data.get("body") ?? "").trim();
+
+  const lines: string[] = [];
+  if (name) lines.push(`Name: ${name}`);
+  if (email) lines.push(`Email: ${email}`);
+  if (organization) lines.push(`Organization: ${organization}`);
+  lines.push("", bodyText);
+
+  const params = new URLSearchParams();
+  if (name) {
+    params.set("subject", `Partnership inquiry from ${name}`);
+  } else {
+    params.set("subject", "Partnership inquiry");
+  }
+  params.set("body", lines.join("\n"));
+
+  window.location.href = `mailto:${siteConfig.contactEmail}?${params.toString()}`;
+}
+
 export function ContactPageContent() {
   const { messages } = useLanguage();
   const contact = messages.contact;
@@ -17,9 +41,10 @@ export function ContactPageContent() {
         <Card className="order-2 lg:order-1">
           <form
             className="space-y-5"
-            action={`mailto:${siteConfig.contactEmail}`}
-            method="post"
-            encType="text/plain"
+            onSubmit={(event) => {
+              event.preventDefault();
+              openMailto(event.currentTarget);
+            }}
           >
             <div>
               <label htmlFor="name" className={formLabelClass}>
