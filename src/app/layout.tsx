@@ -28,8 +28,11 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: `${basePath}/brand/ayusyntax.png`,
-    apple: `${basePath}/brand/ayusyntax.png`,
+    icon: [
+      { url: `${basePath}/icon.png`, type: "image/png", sizes: "500x500" },
+      { url: `${basePath}/brand/ayusyntax-icon.png`, type: "image/png", sizes: "500x500" },
+    ],
+    apple: `${basePath}/brand/ayusyntax-icon.png`,
   },
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
 };

@@ -55,7 +55,8 @@ If the repository is renamed, no config change is required—the workflow derive
 
 ## Brand
 
-- Logo: copy `Ayusyntax.png` to `public/brand/ayusyntax.png` (single asset for all themes).
+- Header/footer wordmark: `Ayusyntax.png` → `public/brand/ayusyntax.png`.
+- Browser tab icon: `Ayusyntaxlogo1.png` → `src/app/icon.png` and `public/brand/ayusyntax-icon.png` (square).
 - Header uses two bar backgrounds: darker utility strip (`bg-header-utility`), slightly lighter nav bar (`bg-header-nav`) for logo contrast in dark mode.
 - Primary green matches the “Ayu” portion of the wordmark (`--color-brand-green` in `theme.css`).
 
