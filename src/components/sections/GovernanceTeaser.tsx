@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { homeContent } from "@/content/home";
+import { navHrefs } from "@/lib/nav";
 
 export function GovernanceTeaser() {
-  const { governance } = homeContent;
+  const { messages } = useLanguage();
+  const governance = messages.home.governance;
 
   return (
     <section className="border-y border-border bg-bg-elevated py-16 sm:py-20">
@@ -17,10 +21,10 @@ export function GovernanceTeaser() {
             className="max-w-2xl"
           />
           <Link
-            href="/mission"
+            href={navHrefs.mission}
             className="shrink-0 text-sm font-medium text-brand-green hover:text-brand-green-hover"
           >
-            Our mission & structure →
+            {messages.common.missionStructure}
           </Link>
         </div>
       </Container>

@@ -1,25 +1,12 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
-import { ApproachSection } from "@/components/sections/ApproachSection";
-import { howItWorksContent } from "@/content/approach";
+import { HowItWorksPageContent } from "@/app/how-it-works/HowItWorksPageContent";
+import en from "@/lib/i18n/messages/en";
 
 export const metadata: Metadata = {
   title: "How we help",
-  description: howItWorksContent.intro,
+  description: en.approach.intro,
 };
 
 export default function HowItWorksPage() {
-  return (
-    <>
-      <PageShell
-        title="How we help"
-        description={howItWorksContent.intro}
-      />
-      <ApproachSection
-        showHeading={false}
-        linkToDetail={false}
-        className="pb-20"
-      />
-    </>
-  );
+  return <HowItWorksPageContent />;
 }

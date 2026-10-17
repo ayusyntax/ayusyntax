@@ -4,16 +4,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/brand/Logo";
-import { TopUtilityBar } from "@/components/layout/TopUtilityBar";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
-import { navLinks } from "@/lib/constants";
+import { TopUtilityBar } from "@/components/layout/TopUtilityBar";
+import { getNavLinks, navHrefs } from "@/lib/nav";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { messages } = useLanguage();
+  const navLinks = getNavLinks(messages);
 
   return (
     <header className="sticky top-0 z-50">
@@ -24,7 +27,7 @@ export function SiteHeader() {
 
           <nav
             className="hidden items-center gap-0.5 lg:flex"
-            aria-label="Main navigation"
+            aria-label={messages.common.mainNavigation}
           >
             {navLinks.map((link) => {
               const active = pathname === link.href;
@@ -47,7 +50,9 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-2 lg:flex">
             <ThemeToggle />
-            <Button href="/contact" size="sm">Partner with us</Button>
+            <Button href={navHrefs.contact} size="sm">
+              {messages.common.partnerWithUs}
+            </Button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -59,7 +64,7 @@ export function SiteHeader() {
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
             >
-              {open ? "Close" : "Menu"}
+              {open ? messages.common.close : messages.common.menu}
             </button>
           </div>
         </Container>
@@ -69,7 +74,10 @@ export function SiteHeader() {
             id="mobile-nav"
             className="border-t border-border bg-bg-header-nav px-5 py-4 lg:hidden"
           >
-            <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+            <nav
+              className="flex flex-col gap-1"
+              aria-label={messages.common.mobileNavigation}
+            >
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -80,8 +88,8 @@ export function SiteHeader() {
                   {link.label}
                 </Link>
               ))}
-              <Button href="/contact" className="mt-3 w-full" size="sm">
-                Partner with us
+              <Button href={navHrefs.contact} className="mt-3 w-full" size="sm">
+                {messages.common.partnerWithUs}
               </Button>
             </nav>
           </div>

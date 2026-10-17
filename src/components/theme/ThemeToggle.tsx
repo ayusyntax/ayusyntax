@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { useTheme } from "@/components/theme/ThemeProvider";
 import { cn } from "@/lib/cn";
 
@@ -9,6 +10,7 @@ type ThemeToggleProps = {
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
   const { theme, toggleTheme, mounted } = useTheme();
+  const { messages } = useLanguage();
 
   if (!mounted) {
     return (
@@ -18,10 +20,10 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
           "rounded-md border border-border px-3 py-2 text-sm font-medium text-text-secondary",
           className,
         )}
-        aria-label="Toggle color theme"
+        aria-label={messages.common.theme}
         disabled
       >
-        Theme
+        {messages.common.theme}
       </button>
     );
   }
@@ -36,10 +38,12 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
         "rounded-md border border-border px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:border-border-strong hover:text-text-primary",
         className,
       )}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      title={isDark ? "Light mode" : "Dark mode"}
+      aria-label={
+        isDark ? messages.common.switchToLight : messages.common.switchToDark
+      }
+      title={isDark ? messages.common.lightMode : messages.common.darkMode}
     >
-      {isDark ? "Light" : "Dark"}
+      {isDark ? messages.common.light : messages.common.dark}
     </button>
   );
 }

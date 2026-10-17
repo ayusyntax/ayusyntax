@@ -1,33 +1,32 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { trustPillars } from "@/content/trust";
+import { navHrefs } from "@/lib/nav";
 
 type ComplianceGridProps = {
   compact?: boolean;
 };
 
 export function ComplianceGrid({ compact = false }: ComplianceGridProps) {
+  const { messages } = useLanguage();
+  const compliance = messages.compliance;
+  const pillars = messages.trust.pillars;
+
   return (
     <section className={compact ? "py-12" : "border-b border-border py-16 sm:py-24"}>
       <Container>
         <SectionHeading
-          eyebrow="Trust"
-          title={
-            compact
-              ? "Security and compliance you can explain to your board"
-              : "Security and compliance you can explain to your board"
-          }
-          description={
-            compact
-              ? "We design for hospital governance, patient trust, and India’s regulatory landscape—without unnecessary jargon."
-              : "We design for hospital governance, patient trust, and India’s regulatory landscape—without unnecessary jargon."
-          }
+          eyebrow={compliance.eyebrow}
+          title={compliance.title}
+          description={compliance.description}
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {trustPillars.map((pillar) => (
-            <Card key={pillar.id}>
+          {pillars.map((pillar) => (
+            <Card key={pillar.title}>
               <h3 className="text-lg font-semibold text-text-primary">
                 {pillar.title}
               </h3>
@@ -40,10 +39,10 @@ export function ComplianceGrid({ compact = false }: ComplianceGridProps) {
         {compact ? (
           <p className="mt-8 text-sm">
             <Link
-              href="/trust"
+              href={navHrefs.trust}
               className="font-medium text-brand-green hover:text-brand-green-hover"
             >
-              Read more about trust & security →
+              {messages.common.readTrust}
             </Link>
           </p>
         ) : null}

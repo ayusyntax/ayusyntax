@@ -1,10 +1,14 @@
+"use client";
+
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
-import { homeContent } from "@/content/home";
+import { navHrefs } from "@/lib/nav";
 
 export function HeroSection() {
-  const { hero } = homeContent;
+  const { messages } = useLanguage();
+  const hero = messages.home.hero;
 
   return (
     <section className="relative overflow-hidden border-b border-border bg-bg-elevated">
@@ -28,9 +32,9 @@ export function HeroSection() {
               {hero.description}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={hero.primaryCta.href}>{hero.primaryCta.label}</Button>
-              <Button href={hero.secondaryCta.href} variant="secondary">
-                {hero.secondaryCta.label}
+              <Button href={navHrefs.howWeHelp}>{hero.primaryCta}</Button>
+              <Button href={navHrefs.contact} variant="secondary">
+                {hero.secondaryCta}
               </Button>
             </div>
           </div>
@@ -38,10 +42,10 @@ export function HeroSection() {
           <div className="lg:col-span-5">
             <Card className="border-brand-green/25 shadow-sm">
               <p className="text-sm font-semibold text-brand-green">
-                {hero.aside.title}
+                {hero.asideTitle}
               </p>
               <ul className="mt-4 space-y-3 border-t border-border pt-4">
-                {hero.aside.items.map((item) => (
+                {hero.asideItems.map((item) => (
                   <li
                     key={item}
                     className="flex gap-3 text-sm leading-relaxed text-text-secondary"
@@ -56,10 +60,10 @@ export function HeroSection() {
               </ul>
               <div className="mt-6 rounded-md border border-border bg-bg-base/60 p-4">
                 <p className="text-xs font-medium uppercase tracking-wide text-text-muted">
-                  Response
+                  {messages.common.responseTitle}
                 </p>
                 <p className="mt-1 text-sm text-text-primary">
-                  We reply to partnership inquiries within a few business days.
+                  {messages.common.responseBody}
                 </p>
               </div>
             </Card>

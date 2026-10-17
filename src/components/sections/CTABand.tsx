@@ -1,9 +1,13 @@
+"use client";
+
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { homeContent } from "@/content/home";
+import { navHrefs } from "@/lib/nav";
 
 export function CTABand() {
-  const { cta } = homeContent;
+  const { messages } = useLanguage();
+  const cta = messages.home.cta;
 
   return (
     <section className="py-16 sm:py-24">
@@ -19,8 +23,8 @@ export function CTABand() {
               {cta.description}
             </p>
           </div>
-          <Button href={cta.button.href} className="mt-8 shrink-0 lg:mt-0">
-            {cta.button.label}
+          <Button href={navHrefs.contact} className="mt-8 shrink-0 lg:mt-0">
+            {cta.button}
           </Button>
         </div>
       </Container>

@@ -1,11 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { approachPillars } from "@/content/approach";
-import { homeContent } from "@/content/home";
 import { cn } from "@/lib/cn";
+import { navHrefs } from "@/lib/nav";
+
+const badgeToneById: Record<string, "amber" | "blue"> = {
+  presence: "amber",
+  coordination: "blue",
+};
 
 type ApproachSectionProps = {
   showHeading?: boolean;
@@ -18,7 +25,9 @@ export function ApproachSection({
   linkToDetail = true,
   className,
 }: ApproachSectionProps) {
-  const teaser = homeContent.approachTeaser;
+  const { messages } = useLanguage();
+  const teaser = messages.home.approachTeaser;
+  const pillars = messages.approach.pillars;
 
   return (
     <section
@@ -37,9 +46,12 @@ export function ApproachSection({
         ) : null}
         <div className={showHeading ? "mt-12" : ""}>
           <div className="grid gap-6 lg:grid-cols-2">
-            {approachPillars.map((pillar) => (
+            {pillars.map((pillar) => (
               <Card key={pillar.id} className="flex flex-col">
-                <Badge tone={pillar.badgeTone} className="w-fit normal-case">
+                <Badge
+                  tone={badgeToneById[pillar.id] ?? "amber"}
+                  className="w-fit normal-case"
+                >
                   {pillar.badge}
                 </Badge>
                 <h3 className="mt-4 text-xl font-semibold text-text-primary">
@@ -65,10 +77,10 @@ export function ApproachSection({
           {linkToDetail ? (
             <p className="mt-8 text-sm">
               <Link
-                href="/how-it-works"
+                href={navHrefs.howWeHelp}
                 className="font-medium text-brand-green hover:text-brand-green-hover"
               >
-                Learn how we work with partners →
+                {messages.common.learnPartners}
               </Link>
             </p>
           ) : null}

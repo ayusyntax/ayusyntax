@@ -1,10 +1,14 @@
+"use client";
+
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { homeContent } from "@/content/home";
+import { navHrefs } from "@/lib/nav";
 
 export function PartnerSteps() {
-  const { partnerSteps } = homeContent;
+  const { messages } = useLanguage();
+  const partnerSteps = messages.home.partnerSteps;
 
   return (
     <section className="border-y border-border bg-bg-elevated py-16 sm:py-24">
@@ -16,21 +20,21 @@ export function PartnerSteps() {
               title={partnerSteps.title}
               description={partnerSteps.description}
             />
-            <Button href="/contact" className="mt-8 hidden lg:inline-flex">
-              Contact us
+            <Button href={navHrefs.contact} className="mt-8 hidden lg:inline-flex">
+              {messages.common.contactUs}
             </Button>
           </div>
           <ol className="grid gap-4 lg:col-span-8 sm:grid-cols-3">
-            {partnerSteps.steps.map((item) => (
+            {partnerSteps.steps.map((item, index) => (
               <li
-                key={item.step}
+                key={item.title}
                 className="rounded-lg border border-border bg-bg-base p-6"
               >
                 <span
                   className="font-display text-3xl font-semibold text-brand-green"
                   aria-hidden
                 >
-                  {item.step}
+                  {index + 1}
                 </span>
                 <h3 className="mt-3 font-semibold text-text-primary">
                   {item.title}
@@ -43,7 +47,7 @@ export function PartnerSteps() {
           </ol>
         </div>
         <div className="mt-8 text-center lg:hidden">
-          <Button href="/contact">Contact us</Button>
+          <Button href={navHrefs.contact}>{messages.common.contactUs}</Button>
         </div>
       </Container>
     </section>

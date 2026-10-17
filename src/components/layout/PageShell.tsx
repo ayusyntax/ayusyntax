@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/cn";
 
@@ -15,12 +18,19 @@ export function PageShell({
   children,
   className,
 }: PageShellProps) {
+  const { messages } = useLanguage();
+
   return (
     <>
       <div className="border-b border-border bg-bg-elevated">
         <Container className="py-3">
-          <nav aria-label="Breadcrumb" className="text-xs text-text-muted">
-            <Link href="/" className="hover:text-brand-green">Home</Link>
+          <nav
+            aria-label={messages.common.breadcrumb}
+            className="text-xs text-text-muted"
+          >
+            <Link href="/" className="hover:text-brand-green">
+              {messages.common.home}
+            </Link>
             <span className="mx-2" aria-hidden>/</span>
             <span className="text-text-secondary">{title}</span>
           </nav>
@@ -28,7 +38,7 @@ export function PageShell({
         <div className="grid-infrastructure border-t border-border">
           <Container className="py-12 sm:py-16">
             <p className="text-sm font-medium tracking-wide text-brand-green uppercase">
-              Ayusyntax
+              {messages.common.ayusyntax}
             </p>
             <h1
               className="mt-3 max-w-3xl font-display text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl"

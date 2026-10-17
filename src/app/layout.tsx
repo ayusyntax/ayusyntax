@@ -4,6 +4,8 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { basePath } from "@/lib/base-path";
+import { LanguageProvider } from "@/components/i18n/LanguageProvider";
+import en from "@/lib/i18n/messages/en";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: en.site.description,
   icons: {
     icon: [
       { url: `${basePath}/icon.png`, type: "image/png", sizes: "500x500" },
@@ -46,9 +48,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
+          <LanguageProvider>
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
