@@ -16,9 +16,9 @@ export function SiteFooter() {
               {siteConfig.description}
             </p>
             <p className="mt-4 text-xs text-text-muted">
-              Ayusyntax Inc. is organized as a U.S. 501(c)(3) nonprofit in
-              partnership with an Indian Section 8 company. This site is
-              informational and does not collect patient health data.
+              Ayusyntax is a charitable nonprofit working across the United
+              States and India. This website shares information about our
+              mission—it does not collect patient health data.
             </p>
           </div>
 
@@ -39,16 +39,8 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-text-primary">Team</p>
+            <p className="text-sm font-semibold text-text-primary">Contact</p>
             <ul className="mt-3 space-y-2 text-sm text-text-secondary">
-              <li>
-                <Link
-                  href="/styleguide"
-                  className="transition-colors hover:text-brand-green"
-                >
-                  Styleguide (contributors)
-                </Link>
-              </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.contactEmail}`}

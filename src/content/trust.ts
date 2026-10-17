@@ -1,36 +1,36 @@
 export const trustPillars = [
   {
-    id: "dpdp",
-    title: "DPDP Act alignment",
+    id: "privacy-law",
+    title: "Data protection in India",
     description:
-      "Architecture and hosting choices respect India’s Digital Personal Data Protection requirements, with data localization on enterprise cloud in Indian regions.",
+      "Our programs are designed with India’s personal data protection requirements in mind, including where health information is processed and stored.",
   },
   {
-    id: "abdm",
-    title: "ABDM-ready",
+    id: "national-health",
+    title: "National digital health programs",
     description:
-      "Integrations target the Ayushman Bharat Digital Mission framework, including pathways for ABHA and Scan & Share at the clinic edge.",
+      "We help providers participate in India’s digital health ecosystem—such as ABHA health IDs and streamlined check-in—without compromising your governance policies.",
   },
   {
-    id: "zk",
-    title: "Zero-knowledge posture",
+    id: "architecture",
+    title: "Privacy-first architecture",
     description:
-      "Sensitive payloads are encrypted on the patient device before transit. Ayusyntax routes ciphertext; hospitals and patients retain keys.",
+      "When handling sensitive workflows, we minimize what we see: information stays encrypted in transit, and access stays with your facility and the patient.",
   },
   {
-    id: "fhir",
-    title: "HL7 FHIR",
+    id: "interop",
+    title: "Fits your existing systems",
     description:
-      "Interop with modern health systems uses FHIR-oriented APIs so orthopedic, Ayurvedic, and hospital EHR contexts can share structured data safely.",
+      "We integrate using widely adopted health data standards so your EHR, specialty workflows, and hospital systems can exchange information responsibly.",
   },
 ] as const;
 
 export const trustPageContent = {
-  title: "Trust & compliance",
+  title: "Trust & security",
   description:
-    "Stakeholders should see how Ayusyntax thinks about privacy before any product demo. These principles guide engineering, hosting, and partnerships.",
+    "Hospital administrators, compliance officers, and clinical leaders should understand our commitments before any deployment. These principles guide how we build, host, and support your programs.",
   hosting:
-    "Development and staging environments run on AWS or GCP regions physically located in India (for example Mumbai or Hyderabad) so routing and audit trails respect localization expectations.",
+    "Production and testing environments use enterprise cloud in India so processing and audit trails align with common expectations for health data residency.",
   liability:
-    "Phase 1 properties are informational only. Phase 2 features are introduced with explicit data agreements, encryption review, and hospital-controlled key custody.",
+    "Public websites share only information you choose to publish. Deeper capabilities are rolled out with written agreements, security review, and clear roles for who controls patient data.",
 } as const;

@@ -9,7 +9,7 @@ export function HeroSection() {
     <section className="relative overflow-hidden border-b border-border">
       <div className="absolute inset-0 grid-infrastructure opacity-60" aria-hidden />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-brand-green/5 via-transparent to-bg-base"
+        className="absolute inset-0 bg-gradient-to-b from-brand-green/8 via-transparent to-bg-base"
         aria-hidden
       />
       <Container as="section" className="relative py-20 sm:py-28 section-fade-in">
@@ -32,13 +32,24 @@ export function HeroSection() {
         </div>
         <dl className="mt-16 grid gap-6 border-t border-border pt-10 sm:grid-cols-3">
           {[
-            { term: "Phase 1", def: "Free static clinic sites—no PHI" },
-            { term: "Phase 2", def: "Zero-knowledge encrypted routing" },
-            { term: "Compliance", def: "DPDP · ABDM · India-region cloud" },
+            {
+              term: "Find your clinic",
+              def: "Clear websites with the information patients need—no medical records online",
+            },
+            {
+              term: "Protect your patients",
+              def: "Sensitive workflows built so your facility stays in control",
+            },
+            {
+              term: "Built for India",
+              def: "Hosting and standards aligned with national health and privacy expectations",
+            },
           ].map((item) => (
             <div key={item.term}>
               <dt className="text-sm font-semibold text-text-primary">{item.term}</dt>
-              <dd className="mt-1 text-sm text-text-secondary">{item.def}</dd>
+              <dd className="mt-1 text-sm leading-relaxed text-text-secondary">
+                {item.def}
+              </dd>
             </div>
           ))}
         </dl>

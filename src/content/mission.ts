@@ -1,33 +1,33 @@
 export const missionContent = {
   title: "Mission",
   description:
-    "Ayusyntax exists to connect fragmented healthcare networks in India with infrastructure that is secure, modern, and accountable to the communities it serves.",
+    "Ayusyntax connects fragmented healthcare networks in India with infrastructure that is secure, modern, and accountable to the communities it serves.",
   vision:
-    "We believe every clinic deserves a trustworthy digital front door—and a credible path to national digital health programs—without surrendering control of patient information to a third-party warehouse.",
+    "Every clinic deserves a trustworthy digital front door—and a practical path to national digital health programs—without giving up control of patient information.",
   structure: {
     title: "How we are organized",
     items: [
       {
         heading: "United States",
         body:
-          "Ayusyntax Inc. is incorporated as a charitable organization pursuing 501(c)(3) status, enabling tax-deductible support and transparent governance.",
+          "Ayusyntax is a U.S. charitable nonprofit, enabling transparent governance and support from donors and partners who share our mission.",
       },
       {
         heading: "India",
         body:
-          "A Section 8 nonprofit subsidiary enables lawful local operations, hiring, and hospital partnerships under the Companies Act framework.",
+          "A registered Indian nonprofit entity allows us to work locally with hospitals, hire in-country, and operate within national nonprofit rules.",
       },
       {
         heading: "Clinical leadership",
         body:
-          "An advisory board includes clinic owners and hospital directors who guide pilots—from orthopedic Scan & Share deployments to multi-site Ayurvedic integrations.",
+          "Practicing clinicians and hospital executives advise our roadmap—from single-specialty clinics to multi-site hospital networks including Ayurvedic and allopathic care.",
       },
     ],
   },
   principles: [
-    "Start with public value before touching regulated health data",
-    "Route encrypted data; do not hoard it",
-    "Measure outcomes at the clinic desk, not only in dashboards",
-    "Transition institutional knowledge to local healthcare leadership over time",
+    "Earn trust in public before handling regulated health information",
+    "Connect systems without hoarding patient data",
+    "Measure success at the front desk and the bedside, not only in reports",
+    "Grow local capacity so partners lead their own digital future",
   ],
 } as const;

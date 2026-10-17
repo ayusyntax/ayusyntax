@@ -1,39 +1,39 @@
 export const homeContent = {
   hero: {
-    eyebrow: "Health technology · India",
-    title: "Modern infrastructure for clinics and hospitals that cannot afford to get privacy wrong.",
+    eyebrow: "Health technology for India",
+    title: "Digital infrastructure clinics and hospitals can trust.",
     description:
-      "Ayusyntax is an international health-technology nonprofit helping bridge fragmented care networks across India—with secure, practical digital tools that earn trust before they ever touch patient data.",
-    primaryCta: { label: "How it works", href: "/how-it-works" },
+      "Ayusyntax is a nonprofit helping care providers across India modernize how they reach patients and coordinate care—with privacy, clarity, and accountability built in from the start.",
+    primaryCta: { label: "How we help", href: "/how-it-works" },
     secondaryCta: { label: "Partner with us", href: "/contact" },
   },
   missionSnapshot: {
     eyebrow: "Our mission",
-    title: "Close the gap between world-class care and everyday access.",
+    title: "Better access starts with better infrastructure.",
     body:
-      "Many local clinics and hospitals still lack a credible public presence and a path to modern digital workflows. We start with what is safe and free, then grow into enterprise-grade routing—always with hospitals and patients in control of their data.",
+      "Too many clinics still lack a dependable online presence—and a safe path to digital registration and national health programs. We partner with providers to close that gap without asking them to hand over patient data to a third-party warehouse.",
     bullets: [
-      "U.S. 501(c)(3) nonprofit paired with an Indian Section 8 organization",
-      "Built for India’s DPDP Act and Ayushman Bharat Digital Mission (ABDM)",
-      "Engineering led by a student team with clinical advisors on the ground",
+      "Charitable nonprofit operating across the United States and India",
+      "Designed around India’s data protection law and national digital health standards",
+      "Guided by clinicians and hospital leaders who work in the settings we serve",
     ],
   },
-  phasesTeaser: {
-    eyebrow: "Two-phase model",
-    title: "Trust first. Capability second.",
+  approachTeaser: {
+    eyebrow: "What we offer",
+    title: "Start simple. Scale with confidence.",
     description:
-      "We deliberately separate public information from sensitive workflows so partners can adopt Ayusyntax without taking on unnecessary liability.",
+      "Public-facing tools come first, so your community can find you easily. Advanced coordination follows the same privacy principles your compliance team expects.",
   },
   governance: {
-    eyebrow: "Governance",
-    title: "Structured for accountability across borders.",
+    eyebrow: "Who we are",
+    title: "A nonprofit built for long-term partnership.",
     description:
-      "Ayusyntax operates through formal nonprofit entities in the United States and India, with clear expenditure responsibility, clinical advisors, and compliance review as features scale.",
+      "We are structured for transparent governance, cross-border accountability, and hands-on support from advisors who understand clinic and hospital operations.",
   },
   cta: {
-    title: "Bring Ayusyntax to your clinic or hospital network.",
+    title: "Ready to strengthen your clinic or hospital network?",
     description:
-      "We are onboarding pilot partners for Phase 1 sites and planning ABDM-aligned deployments with advisory hospitals in India.",
+      "We are welcoming partner clinics for web presence and working with hospital leaders on privacy-first digital programs across India.",
     button: { label: "Start a conversation", href: "/contact" },
   },
 } as const;

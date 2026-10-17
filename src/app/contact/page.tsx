@@ -6,7 +6,8 @@ import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Partner with Ayusyntax for Phase 1 clinic sites or pilot deployments.",
+  description:
+    "Partner with Ayusyntax for clinic web presence or hospital digital health programs.",
 };
 
 export default function ContactPage() {
@@ -96,9 +97,9 @@ export default function ContactPage() {
           <Card>
             <h2 className="font-semibold text-text-primary">Who we work with</h2>
             <ul className="mt-3 space-y-2 text-sm text-text-secondary">
-              <li>Single-specialty and multi-site clinics in India</li>
-              <li>Hospital networks exploring ABDM pilots</li>
-              <li>Student engineers joining the open-source effort</li>
+              <li>Single-specialty and multi-site clinics across India</li>
+              <li>Hospital networks improving registration and digital health IDs</li>
+              <li>Foundations and partners aligned with our nonprofit mission</li>
             </ul>
           </Card>
           <Card>

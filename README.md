@@ -41,7 +41,7 @@ If the repository is renamed, no config change is required—the workflow derive
 |------|---------|
 | `src/content/` | Copy and structured content—edit here first |
 | `src/components/ui/` | Buttons, cards, badges, layout primitives |
-| `src/components/sections/` | Reusable page sections (hero, phases, compliance) |
+| `src/components/sections/` | Reusable page sections (hero, approach, compliance) |
 | `src/components/layout/` | Header, footer, page shell |
 | `src/styles/theme.css` | Design tokens (colors, radii) |
 | `public/brand/` | Official logo (`ayusyntax-logo.png`) |
@@ -63,7 +63,6 @@ If the repository is renamed, no config change is required—the workflow derive
 
 - `/` — Home
 - `/mission` — Mission and governance overview
-- `/how-it-works` — Two-phase model
+- `/how-it-works` — How we help (clinic presence & secure coordination)
 - `/trust` — Compliance and security principles
 - `/contact` — Partner inquiry (mailto form)
-- `/styleguide` — Contributor design reference

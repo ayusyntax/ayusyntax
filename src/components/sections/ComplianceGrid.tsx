@@ -14,11 +14,15 @@ export function ComplianceGrid({ compact = false }: ComplianceGridProps) {
       <Container>
         <SectionHeading
           eyebrow="Trust"
-          title={compact ? "Built for regulated health environments" : "Compliance by design"}
+          title={
+            compact
+              ? "Security and compliance you can explain to your board"
+              : "Security and compliance you can explain to your board"
+          }
           description={
             compact
-              ? "Privacy and national digital health standards inform every layer—from public sites to encrypted routing."
-              : "Ayusyntax is engineered for India’s regulatory landscape and hospital-grade security expectations."
+              ? "We design for hospital governance, patient trust, and India’s regulatory landscape—without unnecessary jargon."
+              : "We design for hospital governance, patient trust, and India’s regulatory landscape—without unnecessary jargon."
           }
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -39,7 +43,7 @@ export function ComplianceGrid({ compact = false }: ComplianceGridProps) {
               href="/trust"
               className="font-medium text-brand-green hover:text-brand-green-hover"
             >
-              Explore trust & compliance →
+              Read more about trust & security →
             </Link>
           </p>
         ) : null}

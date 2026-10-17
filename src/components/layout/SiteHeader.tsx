@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/brand/Logo";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/lib/constants";
@@ -40,19 +41,23 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          <ThemeToggle />
           <Button href="/contact" size="sm">Partner with us</Button>
         </div>
 
-        <button
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
           type="button"
-          className="rounded-md border border-border px-3 py-2 text-sm text-text-primary md:hidden"
+          className="rounded-md border border-border px-3 py-2 text-sm text-text-primary"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? "Close" : "Menu"}
         </button>
+        </div>
       </div>
 
       {open ? (

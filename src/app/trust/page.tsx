@@ -27,7 +27,7 @@ export default function TrustPage() {
           </Card>
           <Card>
             <h2 className="text-lg font-semibold text-text-primary">
-              Liability posture
+              Rolling out sensitive capabilities
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-text-secondary">
               {trustPageContent.liability}
