@@ -21,6 +21,10 @@
   --color-bg-elevated: #ffffff;
   --color-bg-surface: #ffffff;
 
+  --color-bg-header-utility: #e6eae6;
+  --color-bg-header-nav: #ffffff;
+  --color-bg-input: #ffffff;
+
   --color-text-primary: #141816;
   --color-text-secondary: #4a5650;
   --color-text-muted: #6b7870;
@@ -36,6 +40,10 @@
     --color-bg-base: #0a0c0b;
     --color-bg-elevated: #121614;
     --color-bg-surface: #f7f8f7;
+
+    --color-bg-header-utility: #050605;
+    --color-bg-header-nav: #141816;
+    --color-bg-input: #0a0c0b;
 
     --color-text-primary: #f2f5f3;
     --color-text-secondary: #9aa8a0;
@@ -56,6 +64,10 @@
   --color-bg-elevated: #121614;
   --color-bg-surface: #f7f8f7;
 
+  --color-bg-header-utility: #050605;
+  --color-bg-header-nav: #141816;
+  --color-bg-input: #0a0c0b;
+
   --color-text-primary: #f2f5f3;
   --color-text-secondary: #9aa8a0;
   --color-text-muted: #6b7870;
@@ -74,6 +86,9 @@
   --color-bg-base: var(--color-bg-base);
   --color-bg-elevated: var(--color-bg-elevated);
   --color-bg-surface: var(--color-bg-surface);
+  --color-bg-header-utility: var(--color-bg-header-utility);
+  --color-bg-header-nav: var(--color-bg-header-nav);
+  --color-bg-input: var(--color-bg-input);
 
   --color-text-primary: var(--color-text-primary);
   --color-text-secondary: var(--color-text-secondary);

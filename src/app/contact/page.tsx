@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { formFieldClass, formLabelClass } from "@/components/ui/fieldStyles";
 import { PageShell } from "@/components/layout/PageShell";
 import { siteConfig } from "@/lib/constants";
 
@@ -17,7 +18,7 @@ export default function ContactPage() {
       description="Hospitals, clinic owners, and advisors: tell us about your site and we will follow up. This form does not transmit patient health information."
     >
       <div className="grid gap-10 lg:grid-cols-2">
-        <Card variant="light" className="order-2 lg:order-1">
+        <Card className="order-2 lg:order-1">
           <form
             className="space-y-5"
             action={`mailto:${siteConfig.contactEmail}`}
@@ -25,10 +26,7 @@ export default function ContactPage() {
             encType="text/plain"
           >
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-text-on-surface"
-              >
+              <label htmlFor="name" className={formLabelClass}>
                 Name
               </label>
               <input
@@ -36,14 +34,11 @@ export default function ContactPage() {
                 name="name"
                 type="text"
                 required
-                className="mt-1.5 w-full rounded-md border border-border-strong bg-white px-3 py-2 text-sm text-text-on-surface"
+                className={formFieldClass}
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-text-on-surface"
-              >
+              <label htmlFor="email" className={formLabelClass}>
                 Email
               </label>
               <input
@@ -51,28 +46,22 @@ export default function ContactPage() {
                 name="email"
                 type="email"
                 required
-                className="mt-1.5 w-full rounded-md border border-border-strong bg-white px-3 py-2 text-sm text-text-on-surface"
+                className={formFieldClass}
               />
             </div>
             <div>
-              <label
-                htmlFor="organization"
-                className="block text-sm font-medium text-text-on-surface"
-              >
+              <label htmlFor="organization" className={formLabelClass}>
                 Organization
               </label>
               <input
                 id="organization"
                 name="organization"
                 type="text"
-                className="mt-1.5 w-full rounded-md border border-border-strong bg-white px-3 py-2 text-sm text-text-on-surface"
+                className={formFieldClass}
               />
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-text-on-surface"
-              >
+              <label htmlFor="message" className={formLabelClass}>
                 Message
               </label>
               <textarea
@@ -80,7 +69,7 @@ export default function ContactPage() {
                 name="body"
                 rows={5}
                 required
-                className="mt-1.5 w-full rounded-md border border-border-strong bg-white px-3 py-2 text-sm text-text-on-surface"
+                className={formFieldClass}
               />
             </div>
             <Button type="submit" className="w-full sm:w-auto">

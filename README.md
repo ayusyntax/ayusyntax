@@ -44,7 +44,7 @@ If the repository is renamed, no config change is required—the workflow derive
 | `src/components/sections/` | Reusable page sections (hero, approach, compliance) |
 | `src/components/layout/` | Header, footer, page shell |
 | `src/styles/theme.css` | Design tokens (colors, radii) |
-| `public/brand/` | Official logo (`ayusyntax-logo.png`) |
+| `public/brand/` | Official logo (`ayusyntax.png`) |
 
 ## Adding a page
 
@@ -55,9 +55,9 @@ If the repository is renamed, no config change is required—the workflow derive
 
 ## Brand
 
-- Logo source: `Ayusyntaxlogo1.png` (copied to `public/brand/ayusyntax-logo.png`).
+- Logo: copy `Ayusyntax.png` to `public/brand/ayusyntax.png` (single asset for all themes).
+- Header uses two bar backgrounds: darker utility strip (`bg-header-utility`), slightly lighter nav bar (`bg-header-nav`) for logo contrast in dark mode.
 - Primary green matches the “Ayu” portion of the wordmark (`--color-brand-green` in `theme.css`).
-- Use the logo on light surfaces or the built-in light chip in the header.
 
 ## Routes
 

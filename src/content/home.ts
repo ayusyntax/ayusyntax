@@ -6,6 +6,54 @@ export const homeContent = {
       "Ayusyntax is a nonprofit helping care providers across India modernize how they reach patients and coordinate care—with privacy, clarity, and accountability built in from the start.",
     primaryCta: { label: "How we help", href: "/how-it-works" },
     secondaryCta: { label: "Partner with us", href: "/contact" },
+    aside: {
+      title: "Who we serve",
+      items: [
+        "Community clinics and specialty practices",
+        "Hospital networks modernizing patient access",
+        "Leaders who need clear security and governance answers",
+      ],
+    },
+  },
+  servicePillars: [
+    {
+      title: "Clinic presence",
+      description:
+        "Professional websites so patients can find hours, providers, and trusted health information—without putting medical records online.",
+    },
+    {
+      title: "Secure coordination",
+      description:
+        "When you are ready for registration, scheduling, and digital health IDs, we add tools with encryption and controls your team owns.",
+    },
+    {
+      title: "Governance & trust",
+      description:
+        "Programs designed for hospital compliance, India’s privacy expectations, and participation in national digital health initiatives.",
+    },
+  ],
+  partnerSteps: {
+    eyebrow: "Work with us",
+    title: "A straightforward path to partnership",
+    description:
+      "We keep onboarding practical for busy clinical teams—no lengthy procurement theater.",
+    steps: [
+      {
+        step: "1",
+        title: "Tell us about your facility",
+        body: "Share your locations, current digital setup, and what patients struggle with today.",
+      },
+      {
+        step: "2",
+        title: "Plan together",
+        body: "We agree on scope—public presence first, deeper workflows when you are ready—and document privacy roles.",
+      },
+      {
+        step: "3",
+        title: "Launch with support",
+        body: "We deploy, train your staff, and stay available as your programs grow.",
+      },
+    ],
   },
   missionSnapshot: {
     eyebrow: "Our mission",

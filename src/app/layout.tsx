@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, Source_Serif_4 } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { basePath } from "@/lib/base-path";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
@@ -26,6 +27,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: `${basePath}/brand/ayusyntax.png`,
+    apple: `${basePath}/brand/ayusyntax.png`,
+  },
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
 };
 

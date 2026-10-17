@@ -7,7 +7,7 @@ export function MissionSnapshot() {
   const { missionSnapshot } = homeContent;
 
   return (
-    <section className="py-16 sm:py-24">
+    <section className="border-b border-border py-16 sm:py-24">
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <SectionHeading
@@ -15,11 +15,11 @@ export function MissionSnapshot() {
             title={missionSnapshot.title}
             description={missionSnapshot.body}
           />
-          <Card variant="light">
-            <p className="text-sm font-semibold text-text-on-surface">
+          <Card>
+            <p className="text-sm font-semibold text-text-primary">
               Why Ayusyntax
             </p>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-text-on-surface/80">
+            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-text-secondary">
               {missionSnapshot.bullets.map((bullet) => (
                 <li key={bullet} className="border-l-2 border-brand-green pl-3">
                   {bullet}
