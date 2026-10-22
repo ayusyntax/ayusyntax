@@ -1,51 +1,37 @@
 "use client";
 
+import { Suspense } from "react";
 import { useLanguage } from "@/components/i18n/LanguageProvider";
+import { ContactSentBanner } from "@/app/contact/ContactSentBanner";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { formFieldClass, formLabelClass } from "@/components/ui/fieldStyles";
+import {
+  contactFormAction,
+  contactFormRedirectUrl,
+} from "@/lib/contact-form";
 import { siteConfig } from "@/lib/constants";
-
-function openMailto(form: HTMLFormElement) {
-  const data = new FormData(form);
-  const name = String(data.get("name") ?? "").trim();
-  const email = String(data.get("email") ?? "").trim();
-  const organization = String(data.get("organization") ?? "").trim();
-  const bodyText = String(data.get("body") ?? "").trim();
-
-  const lines: string[] = [];
-  if (name) lines.push(`Name: ${name}`);
-  if (email) lines.push(`Email: ${email}`);
-  if (organization) lines.push(`Organization: ${organization}`);
-  lines.push("", bodyText);
-
-  const params = new URLSearchParams();
-  if (name) {
-    params.set("subject", `Partnership inquiry from ${name}`);
-  } else {
-    params.set("subject", "Partnership inquiry");
-  }
-  params.set("body", lines.join("\n"));
-
-  window.location.href = `mailto:${siteConfig.contactEmail}?${params.toString()}`;
-}
 
 export function ContactPageContent() {
   const { messages } = useLanguage();
   const contact = messages.contact;
+  const redirectUrl = contactFormRedirectUrl();
 
   return (
     <PageShell title={contact.title} description={contact.description}>
+      <Suspense fallback={null}>
+        <ContactSentBanner />
+      </Suspense>
       <div className="grid gap-10 lg:grid-cols-2">
         <Card className="order-2 lg:order-1">
-          <form
-            className="space-y-5"
-            onSubmit={(event) => {
-              event.preventDefault();
-              openMailto(event.currentTarget);
-            }}
-          >
+          <form className="space-y-5" action={contactFormAction} method="POST">
+            <input type="hidden" name="_subject" value="Ayusyntax partnership inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+            {redirectUrl ? (
+              <input type="hidden" name="_next" value={redirectUrl} />
+            ) : null}
             <div>
               <label htmlFor="name" className={formLabelClass}>
                 {messages.common.formName}
@@ -55,6 +41,7 @@ export function ContactPageContent() {
                 name="name"
                 type="text"
                 required
+                autoComplete="name"
                 className={formFieldClass}
               />
             </div>
@@ -67,6 +54,7 @@ export function ContactPageContent() {
                 name="email"
                 type="email"
                 required
+                autoComplete="email"
                 className={formFieldClass}
               />
             </div>
@@ -78,6 +66,7 @@ export function ContactPageContent() {
                 id="organization"
                 name="organization"
                 type="text"
+                autoComplete="organization"
                 className={formFieldClass}
               />
             </div>
@@ -87,7 +76,7 @@ export function ContactPageContent() {
               </label>
               <textarea
                 id="message"
-                name="body"
+                name="message"
                 rows={5}
                 required
                 className={formFieldClass}

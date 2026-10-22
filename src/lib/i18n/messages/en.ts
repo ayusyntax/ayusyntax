@@ -35,7 +35,7 @@ const en = {
     whoWeWorkWith: "Who we work with",
     sendViaEmail: "Send via email client",
     formDisclaimer:
-      "Submissions open your default mail app. A hosted form can be added later.",
+      "Submissions are sent over HTTPS to our inbox. Do not include patient health information.",
     hosting: "Hosting",
     rollingOut: "Rolling out sensitive capabilities",
     operatingPrinciples: "Operating principles",
