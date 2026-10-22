@@ -3,7 +3,7 @@ export const missionContent = {
   description:
     "Ayusyntax connects fragmented healthcare networks in India with infrastructure that is secure, modern, and accountable to the communities it serves.",
   vision:
-    "Every clinic deserves a trustworthy digital front door—and a practical path to national digital health programs—without giving up control of patient information.",
+    "Every clinic should have a reliable online presence and a practical path into national digital health programs, without giving up control of patient information.",
   structure: {
     title: "How we are organized",
     items: [
@@ -20,14 +20,14 @@ export const missionContent = {
       {
         heading: "Clinical leadership",
         body:
-          "Practicing clinicians and hospital executives advise our roadmap—from single-specialty clinics to multi-site hospital networks including Ayurvedic and allopathic care.",
+          "Practicing clinicians and hospital executives advise our roadmap. Their experience ranges from single-specialty clinics to multi-site hospital networks, including Ayurvedic and allopathic care.",
       },
     ],
   },
   principles: [
     "Earn trust in public before handling regulated health information",
-    "Connect systems without hoarding patient data",
-    "Measure success at the front desk and the bedside, not only in reports",
+    "Connect systems without accumulating patient data",
+    "Measure success by the effect on patient care and daily operations, not only in reports",
     "Grow local capacity so partners lead their own digital future",
   ],
 } as const;

@@ -5,7 +5,7 @@ export const approachPillars = [
     badgeTone: "amber" as const,
     title: "A professional presence online",
     summary:
-      "We help clinics launch clear, fast websites—who you are, how to reach you, and trusted health information for your community.",
+      "We help clinics launch clear, fast websites that explain who you are and how to reach you, and that offer reliable health information to your community.",
     points: [
       "No patient records or intake forms on your public site",
       "A credible first impression for families and referring physicians",
@@ -18,7 +18,7 @@ export const approachPillars = [
     badgeTone: "blue" as const,
     title: "Secure tools for day-to-day care",
     summary:
-      "As your needs grow—appointments, registration, digital health IDs—we add capabilities with strict privacy controls and your team in charge.",
+      "As your needs grow to include appointments, registration, and digital health IDs, we add these capabilities with strict privacy controls while your team stays in charge.",
     points: [
       "Sensitive information is protected before it leaves the patient’s device",
       "Your hospital retains control of access and encryption keys",
@@ -29,5 +29,5 @@ export const approachPillars = [
 
 export const howItWorksContent = {
   intro:
-    "We meet you where you are: strengthen how patients find and trust your clinic first, then introduce deeper digital workflows only when your leadership is ready.",
+    "We start from your current situation. Our first step is to improve how patients find and trust your clinic, and we introduce deeper digital workflows only once your leadership is ready.",
 } as const;

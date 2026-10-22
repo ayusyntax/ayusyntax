@@ -3,7 +3,7 @@ export const homeContent = {
     eyebrow: "Health technology for India",
     title: "Digital infrastructure clinics and hospitals can trust.",
     description:
-      "Ayusyntax is a nonprofit helping care providers across India modernize how they reach patients and coordinate care—with privacy, clarity, and accountability built in from the start.",
+      "Ayusyntax is a nonprofit that helps care providers across India modernize how they reach patients and coordinate care. Privacy, clarity, and accountability are part of every project from the outset.",
     primaryCta: { label: "How we help", href: "/how-it-works" },
     secondaryCta: { label: "Partner with us", href: "/contact" },
     aside: {
@@ -19,7 +19,7 @@ export const homeContent = {
     {
       title: "Clinic presence",
       description:
-        "Professional websites so patients can find hours, providers, and trusted health information—without putting medical records online.",
+        "Professional websites where patients can find hours, providers, and reliable health information. Medical records are never placed online.",
     },
     {
       title: "Secure coordination",
@@ -36,7 +36,7 @@ export const homeContent = {
     eyebrow: "Work with us",
     title: "A straightforward path to partnership",
     description:
-      "We keep onboarding practical for busy clinical teams—no lengthy procurement theater.",
+      "We keep onboarding practical for busy clinical teams and avoid lengthy procurement processes.",
     steps: [
       {
         step: "1",
@@ -46,7 +46,7 @@ export const homeContent = {
       {
         step: "2",
         title: "Plan together",
-        body: "We agree on scope—public presence first, deeper workflows when you are ready—and document privacy roles.",
+        body: "We agree on the scope of work, beginning with your public presence and adding deeper workflows when you are ready. Privacy roles are documented at this stage.",
       },
       {
         step: "3",
@@ -59,7 +59,7 @@ export const homeContent = {
     eyebrow: "Our mission",
     title: "Better access starts with better infrastructure.",
     body:
-      "Too many clinics still lack a dependable online presence—and a safe path to digital registration and national health programs. We partner with providers to close that gap without asking them to hand over patient data to a third-party warehouse.",
+      "Many clinics still lack a dependable online presence, as well as a safe path to digital registration and national health programs. We work with providers to close that gap without asking them to hand over patient data to a third-party warehouse.",
     bullets: [
       "Charitable nonprofit operating across the United States and India",
       "Designed around India’s data protection law and national digital health standards",
@@ -68,9 +68,9 @@ export const homeContent = {
   },
   approachTeaser: {
     eyebrow: "What we offer",
-    title: "Start simple. Scale with confidence.",
+    title: "Begin with the essentials, then expand as needed.",
     description:
-      "Public-facing tools come first, so your community can find you easily. Advanced coordination follows the same privacy principles your compliance team expects.",
+      "We begin with public-facing tools so your community can find you easily. More advanced coordination tools follow the same privacy principles your compliance team expects.",
   },
   governance: {
     eyebrow: "Who we are",
@@ -81,7 +81,7 @@ export const homeContent = {
   cta: {
     title: "Ready to strengthen your clinic or hospital network?",
     description:
-      "We are welcoming partner clinics for web presence and working with hospital leaders on privacy-first digital programs across India.",
+      "We are currently accepting partner clinics for website support and working with hospital leaders on privacy-first digital programs across India.",
     button: { label: "Start a conversation", href: "/contact" },
   },
 } as const;

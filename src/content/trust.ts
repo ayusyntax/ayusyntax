@@ -9,13 +9,13 @@ export const trustPillars = [
     id: "national-health",
     title: "National digital health programs",
     description:
-      "We help providers participate in India’s digital health ecosystem—such as ABHA health IDs and streamlined check-in—without compromising your governance policies.",
+      "We help providers take part in India’s digital health ecosystem, including ABHA health IDs and streamlined check-in, without compromising your governance policies.",
   },
   {
     id: "architecture",
     title: "Privacy-first architecture",
     description:
-      "When handling sensitive workflows, we minimize what we see: information stays encrypted in transit, and access stays with your facility and the patient.",
+      "For sensitive workflows, we limit our own access to data. Information remains encrypted in transit, and access rests with your facility and the patient.",
   },
   {
     id: "interop",
