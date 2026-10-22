@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:pages": "NEXT_PUBLIC_BASE_PATH=/ayusyntax NEXT_PUBLIC_SITE_URL=https://example.github.io/ayusyntax next build",
+    "build": "next build --webpack",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/ayusyntax NEXT_PUBLIC_SITE_URL=https://example.github.io/ayusyntax next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
